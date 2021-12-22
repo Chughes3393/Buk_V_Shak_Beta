@@ -13,7 +13,7 @@ const sonnets =
 // randomizes sonnets
 const randomSonnet = Math.floor(Math.random() * sonnets.length)
 
-// stores all questions and answers 
+// defines questions for purposes inside commenceDuel
 const questions = [
   {
     question: "A?",
@@ -24,36 +24,46 @@ const questions = [
       d: "d"
     }
   }
-
 ];
 
+// starts game
 function commenceDuel() {
+  // initializes variable
   let i = 0;
+  // beginning prompt
   const y = window.prompt('Start Game? Y or N?')
+  // stores answers in array to display @ end + compare w randomSonnet
   let answerArray = [];
+  // variables for answers defined below
   let z;
   let q;
   let w;
   let t;
   let v;
+  // this ends the game if user types N
   if (y === 'N') {
     console.log('Game Over.')
   }
+  // this starts the game!
   if (y === 'Y') {
     while (i < questions.length) {
       console.log("let's get started!")
+      // prevents infinite loop
       break;
     }
+    // initializes console group
     console.group("userAnswers");
+    // first question!
     z = window.prompt('How are you doing today? type "A" for good, "B" for bad.')
     if (z === "A") {
+      // pushes to answerArray
       answerArray.push("Good to hear!")
       console.log("Good to hear!")
     } if (z === "B") {
       console.log('well get bettah!')
       answerArray.push("well get bettah!")
     }
-
+    // second question
     q = window.prompt('Is the sun shining? type "A" for yes, "B" for no.')
     if (q === "A") {
       console.log("It's bright!")
@@ -62,6 +72,7 @@ function commenceDuel() {
       console.log("It's gray!")
       answerArray.push("It's gray!")
     }
+    // third
     w = window.prompt('xyz? type "A" for yes, "B" for no.')
     if (w === "A") {
       console.log("xyz")
@@ -70,16 +81,16 @@ function commenceDuel() {
       console.log("zyx")
       answerArray.push("zyx")
     }
-
+    // fourth
     t = window.prompt('abc? type "A" for yes, "B" for no.')
     if (t === "A") {
-      console.log("abc")
-      answerArray.push("abc")
+      console.log("er est hello banana")
+      answerArray.push("er est hello banana")
     } if (t === "B") {
-      console.log("cba")
-      answerArray.push("cba")
+      console.log("er est hello banana")
+      answerArray.push("er est hello banana")
     }
-
+    // fifth
     v = window.prompt('def? type "A" for yes, "B" for no.')
     if (v === "A") {
       console.log("def")
@@ -88,28 +99,41 @@ function commenceDuel() {
       console.log("fed")
       answerArray.push("fed")
     }
-
+    // ends console group
     console.groupEnd("userAnswers");
+    // lets user know what is going on
     console.log('The above responses are your poem.')
   }
 
   console.log("It will be compared to Shakespeare's Sonnet. This is Shakespeare's Sonnet:")
+  // gives you a randomized sonnet
   console.log(sonnets[randomSonnet])
+  // gives you your answer array
   console.log(answerArray)
 
+  // CAN REUSE THESE VARIABLES TO COMPARE AND GET WINNER 
+  let erCountSonnet = 0
+  let estCountSonnet = 0
+  let erCountAnswers = 0
+  let estCountAnswers = 0
+
+  // function that decides which poem is strongest 
+  function editorDecides(string, word) {
+
+    return string.split(word).length - 1;
+  }
+
+  erCountSonnet = editorDecides(sonnets[randomSonnet], 'er')
+  estCountSonnet = editorDecides(sonnets[randomSonnet], 'est')
+  erCountAnswers = editorDecides(answerArray.toString(), 'er')
+  estCountAnswers = editorDecides(answerArray.toString(), 'est')
+
+  console.log('estCount in random sonnet', estCountSonnet)
+  console.log('erCount in random sonnet', erCountSonnet)
+  console.log('estCount in user poem', estCountAnswers)
+  console.log('erCount in user poem', erCountAnswers)
 }
 
-
-
-function editorDecides() {
-  // need to use .slice method 
-  // comparing user poem with Shakespeare Sonnet 
-  // if randomSonnet has more words that end in "er" than answerArray 
-  // randomSonnet wins -- if answerArray has more words that end in "er" than randomSonnet loses
-
-  // if (randomSonnet > )
-}
-
+// calls game
 commenceDuel()
-
 
