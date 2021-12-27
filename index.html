@@ -7,17 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BETA</title>
     <link rel="stylesheet" href="css/style.css" class="stylesheet">
+    <script defer src="js/script.js"></script>
 </head>
 
 <body>
-    <h1>Bukowski Vs. Shakespeare</h1>
-
+    <div>
+    <h1>Bukowski Vs. Shakespeare</h1></div>
     <div id="container">
-        <div id="question_container" class="hide">
+        <div id="question_container">
             <div id="question">
                 <h1>Question</h1>
             </div>
-            <div id="answers" class="button_grid">
+            <div id="answers" class="button_grid hide" >
                 <button id="a-btn-1">answer 1</button>
                 <button id="a-btn-2">answer 2</button>
                 <button id="a-btn-3">answer 3</button>
@@ -27,14 +28,13 @@
     </div>
 
     <div id="control_start">
-        <button id="start-btn" class="btn">Start</button>
+        <button id="start-btn" class="btn" onclick="commenceDuel()">Start</button>
     </div>
 
     <div id="play_again">
         <button id="play-again-btn" class="btn">Play Again</button>
     </div>
 
-    <script src="js/script.js"></script>
 </body>
 
 </html>

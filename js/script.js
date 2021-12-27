@@ -26,8 +26,33 @@ const questions = [
   }
 ];
 
+/* ========== DOM // Query Selectors ========== */
+
+/* ID's */
+const cont = document.getElementById('container');
+const qCont = document.getElementById('question_container');
+const indexQuestions = document.getElementById('question');
+const answers = document.getElementById('answers');
+const answerBtn1 = document.getElementById('a-btn-1');
+const answerBtn2 = document.getElementById('a-btn-2');
+const answerBtn3 = document.getElementById('a-btn-3');
+const answerBtn4 = document.getElementById('a-btn-4');
+const playingAgain = document.getElementById('play_again');
+const againBtn = document.getElementById('play-again-btn');
+const contStart = document.getElementById('control_start');
+const startBtn = document.getElementById('start-btn');
+
+/* Classes */
+const btnGrid = document.getElementsByClassName('button_grid')
+const btnClass = document.getElementsByClassName('btn')
+const hidden = document.getElementsByClassName('hide')
+
 // starts game
 function commenceDuel() {
+
+  // startBtn.classList.add('hide')
+  answers.classList.remove('hide')
+
   // initializes variable
   let i = 0;
   // beginning prompt
@@ -40,70 +65,127 @@ function commenceDuel() {
   let w;
   let t;
   let v;
-  // this ends the game if user types N
-  if (y === 'N') {
-    console.log('Game Over.')
+  let x;
+  let m;
+  let r;
+  let p;
+  let j;
+  if (y === "") {
+    return;
   }
-  // this starts the game!
-  if (y === 'Y') {
-    while (i < questions.length) {
-      console.log("let's get started!")
-      // prevents infinite loop
-      break;
+  if (y === "N") {
+    // if N -- function does not run
+    console.log('Game Over!')
+    return;
+  } else
+    // this starts the game!
+    if (y === 'Y') {
+      while (i < questions.length) {
+        console.log("let's get started!")
+        // prevents infinite loop
+        break;
+      }
+      // initializes console group
+      console.group("userAnswers");
+      // first question!
+      z = window.prompt('How are you doing today? type "A" for good, "B" for bad.')
+      if (z === "A") {
+        // pushes to answerArray
+        answerArray.push("Good to hear!")
+
+        console.log("Good to hear!")
+      }
+      if (z === "B") {
+
+        console.log('well get bettah!')
+        answerArray.push("well get bettah!")
+      }
+      // second question
+      q = window.prompt('Is the sun shining? type "A" for yes, "B" for no.')
+      if (q === "A") {
+        console.log("It's bright!")
+        answerArray.push("It's bright!")
+      } if (q === "B") {
+        console.log("It's gray!")
+        answerArray.push("It's gray!")
+      }
+      // third
+      w = window.prompt('xyz? type "A" for yes, "B" for no.')
+      if (w === "A") {
+        console.log("xyz")
+        answerArray.push("xyz")
+      } if (w === "B") {
+        console.log("zyx")
+        answerArray.push("zyx")
+      }
+      // fourth
+      t = window.prompt('abc? type "A" for yes, "B" for no.')
+      if (t === "A") {
+        console.log("er est hello banana")
+        answerArray.push("er est hello banana")
+      } if (t === "B") {
+        console.log("er est hello banana")
+        answerArray.push("er est hello banana")
+      }
+      // fifth
+      v = window.prompt('def? type "A" for yes, "B" for no.')
+      if (v === "A") {
+        console.log("def")
+        answerArray.push("def")
+      } if (v === "B") {
+        console.log("fed")
+        answerArray.push("fed")
+      }
+      // sixth
+      x = window.prompt('def? type "A" for yes, "B" for no.')
+      if (x === "A") {
+        console.log("def")
+        answerArray.push("def")
+      } if (x === "B") {
+        console.log("fed")
+        answerArray.push("fed")
+      }
+      // seventh
+      m = window.prompt('def? type "A" for yes, "B" for no.')
+      if (m === "A") {
+        console.log("def")
+        answerArray.push("def")
+      } if (m === "B") {
+        console.log("fed")
+        answerArray.push("fed")
+      }
+      // eighth
+      r = window.prompt('def? type "A" for yes, "B" for no.')
+      if (r === "A") {
+        console.log("def")
+        answerArray.push("def")
+      } if (r === "B") {
+        console.log("fed")
+        answerArray.push("fed")
+      }
+      // ninth
+      p = window.prompt('def? type "A" for yes, "B" for no.')
+      if (p === "A") {
+        console.log("def")
+        answerArray.push("def")
+      } if (p === "B") {
+        console.log("fed")
+        answerArray.push("fed")
+      }
+      // tenth
+      j = window.prompt('def? type "A" for yes, "B" for no.')
+      if (j === "A") {
+        console.log("def")
+        answerArray.push("def")
+      } if (j === "B") {
+        console.log("fed")
+        answerArray.push("fed")
+      }
+      // ends console group
+      console.groupEnd("userAnswers");
+      // lets user know what is going on
+      console.log('The above responses are your poem.')
     }
-    // initializes console group
-    console.group("userAnswers");
-    // first question!
-    z = window.prompt('How are you doing today? type "A" for good, "B" for bad.')
-    if (z === "A") {
-      // pushes to answerArray
-      answerArray.push("Good to hear!")
-      console.log("Good to hear!")
-    } if (z === "B") {
-      console.log('well get bettah!')
-      answerArray.push("well get bettah!")
-    }
-    // second question
-    q = window.prompt('Is the sun shining? type "A" for yes, "B" for no.')
-    if (q === "A") {
-      console.log("It's bright!")
-      answerArray.push("It's bright!")
-    } if (q === "B") {
-      console.log("It's gray!")
-      answerArray.push("It's gray!")
-    }
-    // third
-    w = window.prompt('xyz? type "A" for yes, "B" for no.')
-    if (w === "A") {
-      console.log("xyz")
-      answerArray.push("xyz")
-    } if (w === "B") {
-      console.log("zyx")
-      answerArray.push("zyx")
-    }
-    // fourth
-    t = window.prompt('abc? type "A" for yes, "B" for no.')
-    if (t === "A") {
-      console.log("er est hello banana")
-      answerArray.push("er est hello banana")
-    } if (t === "B") {
-      console.log("er est hello banana")
-      answerArray.push("er est hello banana")
-    }
-    // fifth
-    v = window.prompt('def? type "A" for yes, "B" for no.')
-    if (v === "A") {
-      console.log("def")
-      answerArray.push("def")
-    } if (v === "B") {
-      console.log("fed")
-      answerArray.push("fed")
-    }
-    // ends console group
-    console.groupEnd("userAnswers");
-    // lets user know what is going on
-    console.log('The above responses are your poem.')
-  }
 
   console.log("It will be compared to Shakespeare's Sonnet. This is Shakespeare's Sonnet:")
   // gives you a randomized sonnet
@@ -117,23 +199,59 @@ function commenceDuel() {
   let erCountAnswers = 0
   let estCountAnswers = 0
 
-  // function that decides which poem is strongest 
+  // function that decides which poem is strongest, taking parameters of string and word
+
   function editorDecides(string, word) {
-
+    // use split method to search strings for specific characters
     return string.split(word).length - 1;
-  }
 
+  }
+  // calling the search on the variable arrays -- answerArray is changed to a string
   erCountSonnet = editorDecides(sonnets[randomSonnet], 'er')
   estCountSonnet = editorDecides(sonnets[randomSonnet], 'est')
   erCountAnswers = editorDecides(answerArray.toString(), 'er')
   estCountAnswers = editorDecides(answerArray.toString(), 'est')
 
+  // console logging these bad bois
   console.log('estCount in random sonnet', estCountSonnet)
   console.log('erCount in random sonnet', erCountSonnet)
   console.log('estCount in user poem', estCountAnswers)
   console.log('erCount in user poem', erCountAnswers)
+
+  // conditional statements to decide who wins and loses 
+  if (erCountSonnet && estCountSonnet > erCountAnswers && estCountAnswers) {
+    console.log('Shakespeare wins!')
+  }
+  else if (erCountSonnet > erCountAnswers && estCountAnswers) {
+    console.log('Shakespeare wins!')
+  }
+  else if (estCountSonnet > erCountAnswers && estCountAnswers) {
+    console.log('Shakespeare wins!')
+  }
+  else if (estCountSonnet && erCountSonnet === erCountAnswers && estCountAnswers) {
+    console.log('Tie. Play Again.')
+  }
+  else if (erCountAnswers === 0 && estCountAnswers === 0) {
+    console.log('Shakespeare wins!')
+  }
+  else {
+    console.log('Bukowski wins!')
+  }
+
 }
 
-// calls game
+// calls commenceDuel function
 commenceDuel()
+
+// event listeners VVV 
+// START AND PLAY AGAIN BUTTONS
+startBtn.addEventListener('click', commenceDuel);
+againBtn.addEventListener('click', commenceDuel);
+
+// ANSWER BUTTONS 
+
+// answerBtn1.addEventListener('click', );
+// answerBtn2.addEventListener('click', );
+// answerBtn3.addEventListener('click', );
+// answerBtn4.addEventListener('click', );
 
