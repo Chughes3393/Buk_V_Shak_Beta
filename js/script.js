@@ -56,7 +56,7 @@ function commenceDuel() {
   // initializes variable
   let i = 0;
   // beginning prompt
-  const y = window.prompt('Start Game? Y or N?')
+  const y = window.prompt('Help out Hank will ya? Y or N?')
   // stores answers in array to display @ end + compare w randomSonnet
   let answerArray = [];
   // variables for answers defined below
@@ -81,117 +81,167 @@ function commenceDuel() {
     // this starts the game!
     if (y === 'Y') {
       while (i < questions.length) {
-        console.log("let's get started!")
+        console.group("HANK SAYS");
+        console.log("Thank god kid, I'm real loaded and can't even type... I got some questions for ya to help us get going.")
         // prevents infinite loop
         break;
       }
       // initializes console group
-      console.group("userAnswers");
+
       // first question!
-      z = window.prompt('How are you doing today? type "A" for good, "B" for bad.')
+      z = window.prompt('First off: how ya doing? Type "A" for "alright", "B" for "could be better".')
       if (z === "A") {
         // pushes to answerArray
-        answerArray.push("Good to hear!")
+        answerArray.push("WOKE UP FEELING FINE TODAY. THAT'S HOW I KNEW IT WAS GONNA TO BE A WILD ONE")
 
-        console.log("Good to hear!")
+        console.log("What ya think you're better than me!")
       }
       if (z === "B") {
 
-        console.log('well get bettah!')
-        answerArray.push("well get bettah!")
+        console.log('well kid you know what they they -- misery loves company.')
+        answerArray.push("WOKE UP FEELING HOW I FEEL EVERYDAY, LIKE A RUSTED OUT GUTTER IN AN ABONDONED L.A. MANSION")
+      }
+      if (z === "") {
+        console.log('No answer selected. Please play again.')
+        return;
       }
       // second question
-      q = window.prompt('Is the sun shining? type "A" for yes, "B" for no.')
+      q = window.prompt('Got a lover on your mind or are ya sane today? Type "A" if you have someone on your mind, or "B" if you are sane.')
       if (q === "A") {
-        console.log("It's bright!")
-        answerArray.push("It's bright!")
+        console.log("She got a number huh?")
+        answerArray.push("& WITH A LOVER ON MY MIND IT WAS NO COINCIDENCE I WOKE UP WITH A LION IN MY BED")
       } if (q === "B") {
-        console.log("It's gray!")
-        answerArray.push("It's gray!")
+        console.log("I'm not calling you a liar but you're the only sane person on this planet.")
+        answerArray.push("BUT WITH NOTHING ON MY MIND I JUST DRANK THE DAY AWAY")
+      }
+      if (q === "") {
+        console.log('No answer selected. Please play again.')
+        return;
       }
       // third
-      w = window.prompt('xyz? type "A" for yes, "B" for no.')
+      w = window.prompt("It's New Years Day. What did you do last night? Type 'A' if you went out and painted the town red, type 'B' if you were in bed by 9 because you ate too much spicy food.")
       if (w === "A") {
-        console.log("xyz")
-        answerArray.push("xyz")
+        console.log("Good for you kid. Why didn't you invite ol Hank?")
+        answerArray.push("I THOUGHT I FELT SOMETHING FOLLOW ME HOME AFTER I BLEW UP BABY NEW YEAR")
       } if (w === "B") {
-        console.log("zyx")
-        answerArray.push("zyx")
+        console.log("Who taught you how to party? The nuns at Sunday School?")
+        answerArray.push("I THOUGHT I FELT SOMETHING IN MY COLON AFTER I BLEW UP BABY NEW YEAR")
+      }
+      if (w === "") {
+        console.log('No answer selected. Please play again.')
+        return;
       }
       // fourth
-      t = window.prompt('abc? type "A" for yes, "B" for no.')
+      t = window.prompt("Got any New Year Resolutions? Type 'A' for yes, 'B' for no.")
       if (t === "A") {
-        console.log("er est hello banana")
-        answerArray.push("er est hello banana")
+        console.log("What's the first one? Learning how to tie your velcro shoes?")
+        answerArray.push("BUT IT LEFT EARLY AFTER STEALIN ALL MY CIGARETTES AND BEER")
       } if (t === "B") {
-        console.log("er est hello banana")
-        answerArray.push("er est hello banana")
+        console.log("What's the first one going to be? Learning how to tie your velcro shoes?")
+        answerArray.push("BUT IT TURNED OUT TO BE THE HOT AIR OF FORGOTTEN DREAMS")
+      }
+      if (t === "") {
+        console.log('No answer selected. Please play again.')
+        return;
       }
       // fifth
-      v = window.prompt('def? type "A" for yes, "B" for no.')
+      v = window.prompt("How's your family? Type 'A' for good, 'B' for what family?.")
       if (v === "A") {
-        console.log("def")
-        answerArray.push("def")
+        console.log("Well tell your dad he still owes me fifty bucks")
+        answerArray.push("OUTTA BEER - WALKED TO THE STORE AND THE CASHIER LOOKED LIKE A GIANT TICK")
       } if (v === "B") {
-        console.log("fed")
-        answerArray.push("fed")
+        console.log("Ah , I'm sorry kid, you can come live with Ol Hank if you ever need to.")
+        answerArray.push("OUTTA BEER - STUMBLED TO THE STORE AND WAS ACCOSTED BY A GANG OF PLATYPUS'")
+      }
+      if (v === "") {
+        console.log('No answer selected. Please play again.')
+        return;
       }
       // sixth
-      x = window.prompt('def? type "A" for yes, "B" for no.')
+      x = window.prompt('Got yourself a job? type "A" for yes, "B" for no.')
       if (x === "A") {
-        console.log("def")
-        answerArray.push("def")
+        console.log("You know what they say about jobs...")
+        answerArray.push("I THREW EM SOME MONEY LIKE I WAS A KENNEDY & MADE LIKE A TREE")
       } if (x === "B") {
-        console.log("fed")
-        answerArray.push("fed")
+        console.log("That's the one reasonable thing I've heard all day")
+        answerArray.push("SO I RAN OUTTA THERE WITH WHAT I HAD")
+      }
+      if (x === "") {
+        console.log('No answer selected. Please play again.')
+        return;
       }
       // seventh
-      m = window.prompt('def? type "A" for yes, "B" for no.')
+      m = window.prompt("How's that workin out for ya? Type 'A' for good, 'B' for not so good.")
       if (m === "A") {
-        console.log("def")
-        answerArray.push("def")
+        console.log("yeah well whose your boss? I got some words for him")
+        answerArray.push("NOW I'M RIGHT BACK WHERE I WAS LAST YEAR")
       } if (m === "B") {
-        console.log("fed")
-        answerArray.push("fed")
+        console.log("I could've told you that")
+        answerArray.push("NO FUN - NOW I'M RIGHT BACK AT SQUARE ONE")
+      }
+      if (m === "") {
+        console.log('No answer selected. Please play again.')
+        return;
       }
       // eighth
-      r = window.prompt('def? type "A" for yes, "B" for no.')
+      r = window.prompt('What do you think of poetry readings? Type "A" if you hate them, type "B" if you really hate them.')
       if (r === "A") {
-        console.log("def")
-        answerArray.push("def")
+        console.log("me too")
+        answerArray.push("WRITING POETRY COS I GOT NOTHIN ELSE GOING ON")
       } if (r === "B") {
-        console.log("fed")
-        answerArray.push("fed")
+        console.log("right on, you'll never see me at one.")
+        answerArray.push("WRITING POETRY COS HOPEFULLY ONE DAY IT'LL BRING ME FAME AND FORTUNE")
+      }
+      if (r === "") {
+        console.log('No answer selected. Please play again.')
+        return;
       }
       // ninth
-      p = window.prompt('def? type "A" for yes, "B" for no.')
+      p = window.prompt('What do you think of Billy Shakespeare anyway? Type "A" if you think he is the best, "B" if you really dont care.')
       if (p === "A") {
-        console.log("def")
-        answerArray.push("def")
+        console.log("Come on now, have you ever read Stendahl?")
+        answerArray.push("WISHING I WAS OL BILLY SHAKESPEARE")
       } if (p === "B") {
-        console.log("fed")
-        answerArray.push("fed")
+        console.log("me neither")
+        answerArray.push("BURNING ALL MY BOOKS FOR WARMTH - SHAKESPEARE KEEPS MY COZIEST")
+      }
+      if (p === "") {
+        console.log('No answer selected. Please play again.')
+        return;
       }
       // tenth
-      j = window.prompt('def? type "A" for yes, "B" for no.')
+      j = window.prompt('You know Im a poet to kid, what do ya think of ol Hanks work? type "A" if you like it, "B" if you never read it.')
       if (j === "A") {
-        console.log("def")
-        answerArray.push("def")
+        console.log("atta boy")
+        answerArray.push("BUT I'M JUST CHARLES HANK BUKOWKSI, BEST POET IN THE UNIVERSE")
       } if (j === "B") {
-        console.log("fed")
-        answerArray.push("fed")
+        console.log("we better win kid or I'm gonna smash up your car")
+        answerArray.push("BUT I'M JUST CHARLES HANK BUKOWSKI, WORST POET IN THE UNIVERSE")
+      }
+      if (j === "") {
+        console.log('No answer selected. Please play again.')
+        return;
       }
       // ends console group
-      console.groupEnd("userAnswers");
-      // lets user know what is going on
-      console.log('The above responses are your poem.')
+      console.groupEnd("Hank SAYS");
+
     }
 
-  console.log("It will be compared to Shakespeare's Sonnet. This is Shakespeare's Sonnet:")
+  console.log("Nice work. This is Shakespeare's Sonnet:")
   // gives you a randomized sonnet
   console.log(sonnets[randomSonnet])
   // gives you your answer array
-  console.log(answerArray)
+  console.log(`& This is your poem:`)
+  console.log(`${answerArray[0]}`)
+  console.log(`${answerArray[1]}`)
+  console.log(`${answerArray[2]}`)
+  console.log(`${answerArray[3]}`)
+  console.log(`${answerArray[4]}`)
+  console.log(`${answerArray[5]}`)
+  console.log(`${answerArray[6]}`)
+  console.log(`${answerArray[7]}`)
+  console.log(`${answerArray[8]}`)
+  console.log(`${answerArray[9]}`)
 
   // CAN REUSE THESE VARIABLES TO COMPARE AND GET WINNER 
   let erCountSonnet = 0
@@ -209,33 +259,49 @@ function commenceDuel() {
   // calling the search on the variable arrays -- answerArray is changed to a string
   erCountSonnet = editorDecides(sonnets[randomSonnet], 'er')
   estCountSonnet = editorDecides(sonnets[randomSonnet], 'est')
-  erCountAnswers = editorDecides(answerArray.toString(), 'er')
-  estCountAnswers = editorDecides(answerArray.toString(), 'est')
+  erCountAnswers = editorDecides(answerArray.toString(), 'ER')
+  estCountAnswers = editorDecides(answerArray.toString(), 'EST')
 
   // console logging these bad bois
-  console.log('estCount in random sonnet', estCountSonnet)
-  console.log('erCount in random sonnet', erCountSonnet)
-  console.log('estCount in user poem', estCountAnswers)
-  console.log('erCount in user poem', erCountAnswers)
+  console.log("estCount in Shakespeare's sonnet", estCountSonnet)
+  console.log("erCount in Shakespeare's sonnet", erCountSonnet)
+  console.log('estCount in your poem', estCountAnswers)
+  console.log('erCount in your poem', erCountAnswers)
 
   // conditional statements to decide who wins and loses 
-  if (erCountSonnet && estCountSonnet > erCountAnswers && estCountAnswers) {
+
+  if (erCountSonnet > erCountAnswers && estCountSonnet > estCountAnswers) {
     console.log('Shakespeare wins!')
   }
-  else if (erCountSonnet > erCountAnswers && estCountAnswers) {
+  else if (erCountSonnet > erCountAnswers + estCountAnswers) {
     console.log('Shakespeare wins!')
   }
-  else if (estCountSonnet > erCountAnswers && estCountAnswers) {
+  else if (estCountSonnet > erCountAnswers + estCountAnswers) {
     console.log('Shakespeare wins!')
   }
-  else if (estCountSonnet && erCountSonnet === erCountAnswers && estCountAnswers) {
-    console.log('Tie. Play Again.')
-  }
-  else if (erCountAnswers === 0 && estCountAnswers === 0) {
+  else if (erCountSonnet > erCountAnswers && estCountAnswers === estCountSonnet) {
     console.log('Shakespeare wins!')
+  }
+  else if (estCountSonnet > estCountAnswers && erCountAnswers === erCountSonnet) {
+    console.log('Shakespeare wins!')
+  }
+  else if (erCountAnswers > erCountSonnet && estCountAnswers > estCountSonnet) {
+    console.log('You win!')
+  }
+  else if (erCountAnswers > erCountSonnet && estCountAnswers === estCountSonnet){
+    console.log('You Win!')
+  }
+  else if (estCountAnswers > estCountSonnet && erCountAnswers === erCountSonnet){
+    console.log('You Win!')
+  }
+  else if (erCountAnswers > erCountSonnet + estCountSonnet) {
+    console.log('You win!')
+  }
+  else if (estCountAnswers > erCountSonnet + estCountSonnet) {
+    console.log('You win!')
   }
   else {
-    console.log('Bukowski wins!')
+    console.log('Tie. Play again.')
   }
 
 }
